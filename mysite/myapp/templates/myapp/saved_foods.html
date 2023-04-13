@@ -1,0 +1,14 @@
+{% extends 'myapp/base.html' %}
+
+{% block content %}
+<center>
+    <h1>Saved Foods</h1>
+    <ul>
+    {% for food in saved_foods %}
+        <li>{{ food.name }} - {{ food.price }}</li>
+    {% empty %}
+    <li>No saved foods yet</li>
+    {% endfor %}
+    </ul>
+    </center>
+{% endblock %}
