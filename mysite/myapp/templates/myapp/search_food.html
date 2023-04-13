@@ -1,0 +1,21 @@
+{% extends 'myapp/base.html' %}
+
+{% block content %}
+    <center>
+    {% if searched %}
+        <h1>You searched for {{searched}}</h1>
+        <br/>
+        {% for food in foods %}
+            {{food}} - {{ food.price }}<br/>
+            <form method="post" action="{% url 'save_food' %}">
+            {% csrf_token %}
+            <input type="hidden" name="food_id" value="{{ food.id }}">
+            <input type="submit" value="Save">
+            </form>
+            <br/>
+        {% endfor %}
+    {% else %}
+        <h1>Did not input anything</h1>
+    {% endif %}
+    </center>
+{% endblock %}
