@@ -401,6 +401,18 @@ colnames(final_farewaymeat)[4] <- "date"
 
 
 final_cub_data$name <- gsub(",","",final_cub_data$name)
+final_cub_data$name <- gsub("[0-9]|OunceOpen|EachOpen|product description", "",final_cub_data$name)
+final_cub_data$brand <- "cub"
+
+final_shoprite_data$name <- gsub(",",'',final_shoprite_data$name)
+final_shoprite_data$name <- gsub("[0-9]|OunceOpen|EachOpen|product description|oz|Open Product Description|pound|lb", "",final_shoprite_data$name)
+final_shoprite_data$brand <- "shoprite"
+
+final_farewaymeat$brand <- "farewaymeat"
+
+combined_food_data <- rbind(final_cub_data, final_shoprite_data, final_farewaymeat)
+
+write.csv(combined_food_data, file = "C:\\Users\\theca\\Downloads\\Math-490-capstone\\combined_foods.csv",row.names = FALSE)
 
 
 write.csv(final_cub_data, file = "C:\\Users\\theca\\Downloads\\Math-490-capstone\\cub_food_data.csv",row.names = FALSE)
