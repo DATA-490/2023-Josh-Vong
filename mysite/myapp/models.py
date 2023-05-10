@@ -7,6 +7,7 @@ class Food (models.Model):
     category = models.CharField(_("Category"), max_length=255)
     name = models.CharField(_("Name"), max_length=255)
     price = models.CharField(_("Price"), max_length=255)
+    brand = models.CharField(_("Brand"), max_length=255, default='')
 
     def __str__(self):
         return self.name

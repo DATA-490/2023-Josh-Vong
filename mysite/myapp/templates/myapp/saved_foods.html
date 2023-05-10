@@ -5,7 +5,10 @@
     <h1>Saved Foods</h1>
     <ul>
     {% for food in saved_foods %}
-        <li>{{ food.name }} - {{ food.price }}</li>
+        <ul>
+            <strong> {{ food.brand }} - {{ food }} </strong>
+            <li>{{ food.price }}</li>
+        </ul>
     {% empty %}
     <li>No saved foods yet</li>
     {% endfor %}
