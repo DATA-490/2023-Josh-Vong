@@ -33,12 +33,15 @@
             </li>
           {% endif %}
 
+
         </ul>
-        <form class="d-flex" method=POST action="{% url 'search-food' %}">
+        {% if user.is_authenticated %}
+          <form class="d-flex" method=POST action="{% url 'search-food' %}">
           {% csrf_token %}
           <input class="form-control me-2" type="search" placeholder="Search Food" aria-label="Search" name="searched">
           <button class="btn btn-outline-secondary" type="submit">Search</button>
-        </form>
+          </form>
+        {% endif %}
       </div>
     </div>
   </nav>

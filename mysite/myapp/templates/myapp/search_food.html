@@ -6,7 +6,8 @@
         <h1>You searched for {{searched}}</h1>
         <br/>
         {% for food in foods %}
-            {{food}} - {{ food.price }}<br/>
+
+        <strong> {{ food.brand }} - {{food}} - {{ food.price }} </strong> <br/>
             <form method="post" action="{% url 'save_food' %}">
             {% csrf_token %}
             <input type="hidden" name="food_id" value="{{ food.id }}">
