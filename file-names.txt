@@ -1,0 +1,79 @@
+* `<file>` - <In words, what does it do>
+    - Variables: <If data, explain key variables here>
+
+* `base.html` - This html file contains bootstrap base for all other html pages, basically a starting point for everypage
+    - Variables: No variables
+
+* `food_list.html` - This html file displays the list of food in the database
+    - Variables: food
+
+* `home.html` - homepage for website
+    - Variables: No variables
+
+* `navbar.html` - navbar for website, contains links to other pages and search bar
+    - Variables: No 
+    
+* `saved_foods.html` - when users search food and save it, food item will be saved on this page
+    - Variables: food
+
+* `search_food.html` - Have the users search through food database
+    - Variables: food
+
+* `admin.py` - python file to have adim mmodify database
+    - Variables: list_display, search_fields
+
+* `apps.py` - application for main app, makes tools like django database useable
+    - Variables: default_auto_field, name
+
+* `models.py` - python file that contains database classes and models
+    - class Food (models.Model):
+        date_scrape = models.CharField(_("Date Scrape"), max_length=255)
+        category = models.CharField(_("Category"), max_length=255)
+        name = models.CharField(_("Name"), max_length=255)
+        price = models.CharField(_("Price"), max_length=255)
+    - class WebUser(models.Model):
+        first_name = models.CharField(_("First Name"), max_length=30)
+        last_name = models.CharField(_("Last Name"), max_length=30)
+        email = models.EmailField('User Email')
+
+* `tests.py` - python file to create tests (currently not in use)
+    - Variables: None
+
+* `myapp/urls.py` - python file to create urls to other pages
+    - Variables: None
+
+* `views.py` - Renders the html pages and functions
+    - Variables: food_id, foods, context, saved_foods, searched
+
+* `asgi.py` - python file that exposes the ASGI callable as a module-level variable named `application` (No modifications)
+    - Variables: None
+
+* `settings.py` - python file that has settings for django, installed apps and libraries are here
+    - Variables: None
+
+* `mysite/urls.py` - python file for linking other applications
+    - Variables: None
+
+* `wsgi.py` - python file that exposes the WSGI callable as a module-level variable named `application` (No modifications)
+    - Variables: None
+
+* `cub_food_data.csv` - webscraped CSV file that contains grocery outlet Cub food items
+    - Variables: None
+
+* `db.sqlite3` - Database that contains the food model
+    - Variables: None
+
+* `manage.py` - Django's command-line utility for administrative tasks.
+    - Variables: None
+
+* `sqlite3.exe` - SQLite executable that allows modification to database such as renaming tables, removing colimns, etc.
+    - Variables: None
+
+* `fareway_food_data.csv` - webscraped CSV file that contains grocery outlet Fareway food items
+    - Variables: None
+
+* `shoprite_food_data.csv` - webscraped CSV file that contains grocery outlet Shoprite food items
+    - Variables: None
+
+ * `webscrape.R` - R file to webscrape food suppliers
+    - Variables: skip, cub_meats_data, cub_meat_link, page_result, name, price, meat, produce, eggs, bread, date, final_cub_data, final_shoprite_data, final_farewaymeat
