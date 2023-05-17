@@ -23,39 +23,30 @@ or people with low income.
 ├── fake.csv
 ├── fareway_food_data.csv
 ├── mysite
-│   ├── combined_foods.csv
-│   ├── cub_food_data.csv
-│   ├── db.sqlite3
-│   ├── manage.py
-│   ├── myapp
-│   │   ├── admin.py
-│   │   ├── apps.py
-│   │   ├── __init__.py
-│   │   ├── models.py
-│   │   ├── templates
-│   │   │   ├── admin
-│   │   │   │   ├── csv_upload.html
-│   │   │   │   └── myapp
-│   │   │   │       └── food
-│   │   │   │           └── change_list.html
-│   │   │   └── myapp
-│   │   │       ├── base.html
-│   │   │       ├── food_list.html
-│   │   │       ├── home.html
-│   │   │       ├── login.html
-│   │   │       ├── navbar.html
-│   │   │       ├── register_user.html
-│   │   │       ├── saved_foods.html
-│   │   │       └── search_food.html
-│   │   ├── tests.py
-│   │   ├── urls.py
-│   │   └── views.py
-│   ├── mysite
-│   │   ├── asgi.py
-│   │   ├── settings.py
-│   │   ├── urls.py
-│   │   └── wsgi.py
-│   └── sqlite3.exe
+│   ├── combined_foods.csv
+│   ├── cub_food_data.csv
+│   ├── db.sqlite3
+│   ├── manage.py
+│   ├── myapp
+│   │   ├── admin.py
+│   │   ├── apps.py
+│   │   ├── __init__.py
+│   │   ├── models.py
+│   │   ├── templates
+│   │   │   ├── admin
+│   │   │   │   └── csv_upload.html
+│   │   │   └── myapp
+│   │   │       └── food
+│   │   │           └── change_list.html
+│   │   ├── tests.py
+│   │   ├── urls.py
+│   │   └── views.py
+│   ├── mysite
+│   │   ├── asgi.py
+│   │   ├── settings.py
+│   │   ├── urls.py
+│   │   └── wsgi.py
+│   └── sqlite3.exe
 ├── README.md
 ├── shoprite_food_data.csv
 └── webscrape.R
